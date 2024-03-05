@@ -21,8 +21,8 @@ app = Flask(__name__)
 def hook():
     print(request.data)
     jdata = json.loads(request.data)
-    print(jdata)
-    print(jdata["action"])
+    jdata_formatted = json.dumps(jdata, indent=2)
+    print(jdata_formatted)
     return "Hello World"
 
 
